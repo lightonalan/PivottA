@@ -1,0 +1,21 @@
+
+
+platform :android do
+    desc 'Build the Android application.'
+    lane :build do
+      gradle(task: 'clean', project_dir: 'android/')
+      gradle(task: 'assemble', build_type: 'release', project_dir: 'android/')
+    end
+
+    desc 'Build and upload to App Center.'
+    lane :beta do
+    build
+    appcenter_upload(
+        api_token: "476b2f21db74d65c4742b66ac68d64a42be5c95f",
+        owner_name: "ngocthangit2020-gmail.com",
+        app_name: "resumex_android",
+        apk: ENV["APPCENTER_DISTRIBUTE_APK"]
+        )
+    end
+
+end

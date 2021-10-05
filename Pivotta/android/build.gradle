@@ -2,24 +2,18 @@
 
 buildscript {
     ext {
-        googlePlayServicesAuthVersion = "16.0.1"
-        firebaseMessagingVersion = "21.1.0" // default: "+"
-
-        buildToolsVersion = "29.0.3"
+        buildToolsVersion = "30.0.2"
         minSdkVersion = 21
         compileSdkVersion = 30
         targetSdkVersion = 30
-        ndkVersion = "20.1.5948944"
-        supportLibVersion = "28.0.0"
+        ndkVersion = "21.4.7075529"
     }
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:3.5.4")
-        classpath 'com.google.gms:google-services:4.3.8'
-
+        classpath("com.android.tools.build:gradle:4.2.2")
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -27,6 +21,7 @@ buildscript {
 
 allprojects {
     repositories {
+        mavenCentral()
         mavenLocal()
         maven {
             // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
@@ -38,26 +33,6 @@ allprojects {
         }
 
         google()
-        jcenter()
         maven { url 'https://www.jitpack.io' }
-        maven {
-            name "Tapjoy's maven repo"
-            url "https://sdk.tapjoy.com/"
-        }
-        maven {
-            url 'http://fan-adn.github.io/nendSDK-Android-lib/library'
-        }
-        maven{
-            url "https://imobile-maio.github.io/maven"
-        }
-        maven {
-            url 'https://artifact.bytedance.com/repository/pangle'
-        }
-        maven {
-            url 'https://AdGeneration.github.io/VAMP-Android-SDK/repository'
-        }
-        maven {
-            url "https://maven.google.com"
-        }
     }
 }
