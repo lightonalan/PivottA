@@ -1,0 +1,19 @@
+export const MAIN_CARD = 1;
+export const SUB_CARD = 2;
+export const PUBLIC_CARD = 1;
+export const PRIVATE_CARD = 0;
+
+export const FIRST_PAGE = 1;
+export const PER_PAGE = 10;
+export const EVENT_RECOMMENDED = 'EVENT_RECOMMENDED';
+export const EVENT_DEFAULT = 'EVENT_DEFAULT';
+export const CHECK_HIRAGANA = /[\u3040-\u309f]/;
+export const CHECK_KATAKANA = /^([ァ-ン]|ー)+$/;
+export const CHECK_NUMBER = /^\d+$/;
+export const CHECK_PHONE = /^\d{3}-\d{4}-\d{4}$|^\d{11}$/;
+export const CHECK_POST_CODE = /^$|^[0-9X]{7}$/;
+export const CHECK_WHITESPACE = /\S/;
+export const TIME_ZONE = 'Asia/Tokyo';
+export const COORDS_LOCAL = 'COORDS_LOCAL';
+export const FCM_TOKEN_STATUS = 'FCM_TOKEN_STATUS';
+export const POINT_TOPIC = 10;
