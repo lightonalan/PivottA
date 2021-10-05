@@ -38,7 +38,7 @@ export default {
   law: '特定商取引法の表示',
   logOut: 'ログアウト',
   env: 'Change environment',
-  versions: 'Resumex versions: ',
+  versions: 'Pivotta versions: ',
   titleBtnRegister: 'この内容で登録する',
   titleBtnEdit: '保存する',
   titlePhoneProfile: '電話番号（ハイフンなし）',

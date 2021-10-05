@@ -6,7 +6,7 @@ import {
   View,
   StatusBar,
 } from 'react-native';
-import Picker from 'react-native-picker';
+import Picker from ' ';
 import {initPicker, isAndroid} from 'src/utils/helper';
 import Metrics from 'src/assets/metrics';
 import {RootSiblingPortal} from 'react-native-root-siblings';

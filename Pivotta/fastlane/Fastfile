@@ -13,7 +13,7 @@ platform :android do
     appcenter_upload(
         api_token: "476b2f21db74d65c4742b66ac68d64a42be5c95f",
         owner_name: "ngocthangit2020-gmail.com",
-        app_name: "resumex_android",
+        app_name: "pivotta_android",
         apk: ENV["APPCENTER_DISTRIBUTE_APK"]
         )
     end

@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
-import { View, StyleSheet, TextInput } from 'react-native';
+import {View, StyleSheet, TextInput} from 'react-native';
 import AppColors from 'src/utils/theme/AppColors';
-import { verticalScale, scale } from 'src/utils/theme/Scale';
-import { useController, useFormContext } from 'react-hook-form';
+import {verticalScale, scale} from 'src/utils/theme/Scale';
+import {useController, useFormContext} from 'react-hook-form';
 import Text from 'src/components/TextCustom';
-import IconSearch from 'src/assets/Icons/IconSearch'
+import IconSearch from 'src/assets/Icons/IconSearch';
 const FormTextInput = ({
   name,
   requie,
@@ -21,7 +21,7 @@ const FormTextInput = ({
   inviIcon,
   ...props
 }) => {
-  const { control, formState } = useFormContext();
+  const {control, formState} = useFormContext();
   const [isFocused, setIsFocused] = useState(false);
 
   const formatZipCode = value => {
@@ -32,27 +32,32 @@ const FormTextInput = ({
     return value;
   };
 
-  const { field } = useController({
+  const {field} = useController({
     control,
     name,
   });
   const onChange = text => {
     field.onChange(text);
   };
-  const { errors } = formState;
+  const {errors} = formState;
   const error = errors[name]?.message;
   return (
     <>
-      <View
-        style={{ flex: 1 }}>
-        <Text style={{ fontSize: 13, fontWeight: 'bold', lineHeight: 23 }}>
+      <View style={{flex: 1}}>
+        <Text style={{fontSize: 13, fontWeight: 'bold', lineHeight: 23}}>
           {`${textTitle}`}
           <Text style={styles.textRequie}>{`${requie ? ' *' : ''}`} </Text>
         </Text>
         {error && <Text style={styles.errorText}>{error}</Text>}
-        <View style={{ flexDirection: 'row' }}>
+        <View style={{flexDirection: 'row'}}>
           {
-            <View style={{ position: 'absolute', top: '40%', height: '2%', left: '6%' }}>
+            <View
+              style={{
+                position: 'absolute',
+                top: '40%',
+                height: '2%',
+                left: '6%',
+              }}>
               {!inviIcon && icon}
             </View>
           }
@@ -68,12 +73,15 @@ const FormTextInput = ({
             {...props}
             multiline={textArea ? true : false}
             numberOfLines={textArea ? 4 : 1}
-            style={[inputStyle,
-            {
-              color: 'black',borderColor: isFocused
-              ? AppColors.backgroundBlue
-              : AppColors.innerBorder,
-              }]}
+            style={[
+              inputStyle,
+              {
+                color: 'black',
+                borderColor: isFocused
+                  ? AppColors.backgroundBlue
+                  : AppColors.innerBorder,
+              },
+            ]}
             placeholder={placeholder}
             onFocus={() => {
               setIsFocused(true);
@@ -84,7 +92,7 @@ const FormTextInput = ({
             textAlignVertical={textArea ? 'top' : 'center'}
             maxLength={255}
           />
-        </View> 
+        </View>
       </View>
     </>
   );
@@ -93,8 +101,7 @@ const FormTextInput = ({
 export default FormTextInput;
 
 const styles = StyleSheet.create({
-  container: { 
-  },
+  container: {},
   centerView: {
     justifyContent: 'center',
     alignItems: 'center',
@@ -111,7 +118,7 @@ const styles = StyleSheet.create({
     paddingBottom: verticalScale(6),
     color: '#283C50',
   },
-  errorText: { 
+  errorText: {
     color: AppColors.red,
     marginTop: scale(5),
   },

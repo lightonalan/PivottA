@@ -3,13 +3,13 @@ import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import DeviceInfo from 'react-native-device-info';
 const ListDevice = [
   'iPhone 5',
-  'iPhone 6', 
+  'iPhone 6',
   'iPhone 7',
   'iPhone 8',
   'iPhone 5s',
-  'iPhone 6s', 
+  'iPhone 6s',
   'iPhone 7s',
-  'iPhone 8s', 
+  'iPhone 8s',
   'iphone 6 Plus',
   'iphone 7 Plus',
   'iphone 8 Plus',
@@ -44,14 +44,13 @@ const verticalScale = size => heightScreen * (size / guidelineBaseHeight);
 const moderateScale = (size, factor = 0.5) =>
   size + (scale(size) - size) * factor;
 const heightOfHeaderWithoutAreaView = verticalScale(60);
-let deviceIos=false
+let deviceIos = false;
 DeviceInfo.getDeviceName().then(deviceName => {
   console.log(deviceName);
   if (ListDevice.includes(deviceName)) {
-    deviceIos=true
-  }
-  else{
-    deviceIos=false
+    deviceIos = true;
+  } else {
+    deviceIos = false;
   }
 });
 export {

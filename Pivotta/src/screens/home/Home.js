@@ -1,13 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useState, memo, useRef } from 'react';
-import { verticalScale, scale, deviceIos } from 'src/utils/theme/Scale';
-import {
-  View,
-  StyleSheet,
-  Text
-} from 'react-native';
+import React, {useEffect, useState, memo, useRef} from 'react';
+import {verticalScale, scale, deviceIos} from 'src/utils/theme/Scale';
+import {View, StyleSheet, Text} from 'react-native';
 import API from 'src/common/network/API';
-
 
 const Home = () => {
   return (
@@ -19,9 +14,9 @@ const Home = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1, 
+    flex: 1,
     justifyContent: 'center',
-    alignSelf: 'center'
+    alignSelf: 'center',
   },
 });
 

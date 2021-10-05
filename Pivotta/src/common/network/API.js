@@ -63,5 +63,21 @@ API.switchServer = () => {
 //   return API.instance.delete(`/user/${id}`);
 // };
 
+//Example API
+API.signUp = id_token => {
+  const body = { id_token: id_token };
+  return API.instance.post('/user/signup', body);
+};
+
+API.signIn = id_token => {
+  const body = { id_token: id_token };
+  return API.instance.post('/user/login', body);
+};
+API.userInfo = () => {
+  return API.instance.get('/user/info');
+};
+API.editProfile = (id, body) => {
+  return API.instance.put(`/users/${id}`, body);
+};
 
 export default API;

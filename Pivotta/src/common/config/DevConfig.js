@@ -9,9 +9,9 @@ export default {
   PROTOCOL: 'https://',
   PROTOCOL_UNSECURITY: 'http://',
 
-  DEV_ENDPOINT: 'https://resumex-test.tk/api/v1',
+  DEV_ENDPOINT: 'https://pivotta-test.tk/api/v1',
   TEST_ENDPOINT: '',
-  PRODUCTION_ENDPOINT: 'https://resumex-test.tk/api/v1',
+  PRODUCTION_ENDPOINT: 'https://pivotta-test.tk/api/v1',
   CUSTOMIZE_ENDPOINT: '',
 
   TEST_SERVER: 'Test',
